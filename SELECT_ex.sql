@@ -11,5 +11,6 @@ select ENO AS "번호", ENAME AS "이름", SAL*1234 AS "월급" FROM EMP;
 
 -- 커미션(COMM)을 받지 않은 사람은 누구인지 검색하시오
 SELECT * FROM EMP WHERE COMM=0 OR COMM IS NULL;
+
 -- 개발부의 레코드를 월급으로 내림차순 하시오
 SELECT * FROM EMP WHERE JOB='개발' ORDER BY SAL DESC;
