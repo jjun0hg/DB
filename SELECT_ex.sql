@@ -2,7 +2,6 @@ SELECT* FROM EMP;
 -- 김씨 레코드만 검색
 SELECT * FROM EMP WHERE ENAME LIKE '김%';
 
-
 -- 2000년 이전에 입사한 사원만 검색
 SELECT * FROM EMP WHERE HDATE<'2000-01-01';
 
