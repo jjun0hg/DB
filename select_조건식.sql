@@ -86,12 +86,13 @@ select employee_id as "사원번호", last_name as "사원명",
             when salary<'20000' then '중급'
             else '고급'
             end "구분"
-from employees order by 3;
+from employees order by 3,2;
 
 /*사원테이블에서 사원번호, 이름, 급여, 커미션, 연봉을 출력하시오
         조건1) 연봉은 $ 표시와 세자리마다 콤마를 사용하시오
         조건2) 연봉 = 급여 * 12 + (급여 * 12 * 커미션)
         조건3) 커미션을 받지 않는 사원도 포함해서 출력하시오*/
+        
 select employee_id as "사원번호", last_name as "이름", salary as "급여",
         NVL(COMMISSION_PCT,0) as "커미션", 
         TO_CHAR(NVL(COMMISSION_PCT,1)*(salary*12 ),'$9,999,999')as 연봉
