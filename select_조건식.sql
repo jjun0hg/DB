@@ -96,12 +96,11 @@ from employees order by 3,2;
 select employee_id as "사원번호", last_name as "이름", salary as "급여",
         NVL(COMMISSION_PCT,0) as "커미션", 
         TO_CHAR(NVL(COMMISSION_PCT,1)*(salary*12 ),'$9,999,999')as 연봉
-        from employees;
+        from employees order by 1,2 desc;
 
 /*매니저가 없는 사원의 MANAGER_ID를 1000번으로 표시
         조건1) 제목은 사원번호, 이름, 매니저ID
         조건2) 모든 사원을 표시하시오 */
-select * from employees;
 SELECT EMPLOYEE_ID AS "사원번호", LAST_NAME AS "이름",
         NVL(MANAGER_ID,1000) AS "매니저ID"
         FROM EMPLOYEES ORDER BY 1;
