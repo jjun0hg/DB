@@ -22,5 +22,20 @@ where department_id in(10, 20)
 group by department_id
 order by department_id;
 
+select  employee_id,
+        employees.department_id,
+        department_name
+from employees, departments
+where employees.department_id = departments.department_id;   
 
+select employee_id, department_id, department_name
+from employees
+join departments using(department_id); 
+
+SELECT * FROM LOCATIONS;
+SELECT * FROM departments;
+
+SELECT DEPARTMENT_ID, CITY
+FROM DEPARTMENTS
+JOIN LOCATIONS USING(LOCATION_ID);
 
