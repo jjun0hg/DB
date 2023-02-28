@@ -37,7 +37,12 @@ WHERE STREET_ADDRESS LIKE '%Ch%'
     or STREET_ADDRESS LIKE '%Sh%'
     or STREET_ADDRESS LIKE '%Rd%'
 ORDER BY 6,4;
-    
 
+/*self join*/
 
+select  e.employee_id as 사원번호, 
+	e.last_name as 사원이름, 
+	m.last_name as 관리자
+from employees e
+join employees m on(m.employee_id=e.manager_id);  
 
